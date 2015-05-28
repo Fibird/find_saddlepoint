@@ -1,9 +1,9 @@
 #include <iostream>
 
 using namespace std;
-/* Selects the minimum of the row */
+/* Selects the minimum of the row , and finds the number of col and save it in jmin*/
 int rMinSelect(int c, int rN, int **a, int &jmin);
-/* Selects the maximum of the col */
+/* Selects the maximum of the col that was found by rMinSelect*/
 int cMaxSelect(int rN, int c, int **a, int &imax);
 
 int main()
@@ -21,9 +21,9 @@ int main()
     {
         cout << "--no space left--" << endl;
     }
-    for (i = 0; i < c; i++)
+    for (i = 0; i < r; i++)
     {
-        arry[i] = new int[r];
+        arry[i] = new int[c];
         if (arry[i] == NULL)
         {
             cout << "--no space left--" << endl;
@@ -53,11 +53,11 @@ int main()
         cout << "Not found!" << endl;
     }
 
-    for (i = 0; i < c; i++)
+    for (i = 0; i < r; i++)
     {
-        delete[] arry[i];
+        delete [] arry[i];
     }
-    delete[] arry;
+    delete [] arry;
 
     return 0;
 }
@@ -92,3 +92,4 @@ int cMaxSelect(int rN, int c, int **a, int &imin)
     }
     return colMax;
 }
+
