@@ -16,7 +16,7 @@ int main()
     cin >> r;
     cin >> c;
 
-    arry = new int*[c];
+    arry = new int*[r];
     if (arry == NULL)
     {
         cout << "--no space left--" << endl;
@@ -92,4 +92,3 @@ int cMaxSelect(int rN, int c, int **a, int &imin)
     }
     return colMax;
 }
-
